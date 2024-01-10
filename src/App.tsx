@@ -1,8 +1,10 @@
+import MyRoutes from "./router/routes";
+
 function App() {
   return (
-    <div>
-      <h1>PORTAFOLIO</h1>
-    </div>
+    <>
+      <MyRoutes />
+    </>
   );
 }
 

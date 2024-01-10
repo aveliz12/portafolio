@@ -44,3 +44,13 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+Paleta de colores
+HEX
+#17202a
+#1b2631
+#212f3c
+#f8f9f9
+#ebedef
+#d5d8dc
