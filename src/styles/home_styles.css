@@ -1,10 +1,9 @@
 .container {
   padding: 0 5.0rem;
-  background-color: green;
 }
 
 .main {
-  padding: 9rem;
+  padding: 8rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(277px, 1fr));
   row-gap: 2rem;
@@ -98,7 +97,7 @@
 .images img {
   width: 300px;
   border-radius: 50%;
-  box-shadow: 0 0 10px #f8f9f9;
+  box-shadow: 0 0 10px #d1d0d0;
 }
 
 
