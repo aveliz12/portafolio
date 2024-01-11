@@ -1,5 +1,31 @@
 .section {
   width: 100vw;
+  height: 100%;
+  --s: 84px;
+  --c1: #ffffff;
+  --c2: #f8f8f8;
+  --c3: #f3f3f3;
+
+  --_g: 0 120deg, #0000 0;
+  background: conic-gradient(from 0deg at calc(500% / 6) calc(100% / 3),
+      var(--c3) var(--_g)),
+    conic-gradient(from -120deg at calc(100% / 6) calc(100% / 3),
+      var(--c2) var(--_g)),
+    conic-gradient(from 120deg at calc(100% / 3) calc(500% / 6),
+      var(--c1) var(--_g)),
+    conic-gradient(from 120deg at calc(200% / 3) calc(500% / 6),
+      var(--c1) var(--_g)),
+    conic-gradient(from -180deg at calc(100% / 3) 50%,
+      var(--c2) 60deg,
+      var(--c1) var(--_g)),
+    conic-gradient(from 60deg at calc(200% / 3) 50%,
+      var(--c1) 60deg,
+      var(--c3) var(--_g)),
+    conic-gradient(from -60deg at 50% calc(100% / 3),
+      var(--c1) 120deg,
+      var(--c2) 0 240deg,
+      var(--c3) 0);
+  background-size: calc(var(--s) * 1.732) var(--s);
 }
 
 .nav-bar {
@@ -7,14 +33,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 85%;
   height: 3rem;
   margin: 0 auto;
 }
 
 .logo {
   font-family: cursive;
-  font-size: 2em;
+  font-size: 2.5em;
   color: #17202a;
   transition: all 0.2s ease;
 
@@ -32,20 +58,88 @@
 }
 
 .menu-item {
-  
+
   margin: 0 1rem;
   color: #1b2631;
   cursor: pointer;
   font-size: 1.5em;
+
+  &:hover {
+    color: #1b2631;
+    text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px rgb(222, 235, 231),
+      0 0 45px rgb(153, 179, 170),
+      0 0 55px rgb(93, 109, 104),
+      0 0 70px rgb(64, 71, 69),
+      0 0 80px rgb(0, 12, 8);
+  }
+
   &::after {
     content: " ";
     display: block;
     width: 0%;
     height: 3px;
     background: #1b2631;
-    transition: width 0.2s ease;
+    transition: width 0.4s ease;
   }
+
   &:hover::after {
     width: 100%;
+  }
+}
+
+.active {
+  color: #1b2631;
+  text-shadow:
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff,
+    0 0 10px rgb(222, 235, 231),
+    0 0 45px rgb(153, 179, 170),
+    0 0 55px rgb(93, 109, 104),
+    0 0 70px rgb(64, 71, 69),
+    0 0 80px rgb(0, 12, 8);
+
+  &::after {
+    width: 100%;
+    background: #1b2631;
+  }
+
+
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    height: 20vh
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-item {
+    margin: 0.5rem 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section {
+    height: 35vh
+  }
+  .nav-bar{
+    align-items: center;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-item {
+    font-size: 20px;
+    margin: 0.5rem 0;
   }
 }

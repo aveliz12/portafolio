@@ -1,8 +1,19 @@
-import { ReactNode } from "react";
+import { useEffect, useState } from "react";
 import "../styles/layout_styles.css";
-import { useNavigate } from "react-router-dom";
-const Navigation = ({ children }: { children: ReactNode }) => {
+import { useNavigate, useLocation } from "react-router-dom";
+const Navigation = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const [activeRoute, setActiveRoute] = useState<string | null>(null);
+
+  useEffect(() => {
+    setActiveRoute(location.pathname);
+  }, [location.pathname]);
+
+  const handleMenuClick = (route: string) => {
+    navigate(route);
+    setActiveRoute(route);
+  };
 
   return (
     <>
@@ -10,22 +21,35 @@ const Navigation = ({ children }: { children: ReactNode }) => {
         <nav className="nav-bar">
           <h1 className="logo">AV</h1>
           <ul className="menu">
-            <li className="menu-item" onClick={() => navigate("/")}>
+            <li
+              className={`menu-item ${activeRoute === "/" && "active"}`}
+              onClick={() => handleMenuClick("/")}
+            >
               Inicio
             </li>
-            <li className="menu-item" onClick={() => navigate("/about")}>
+            <li
+              className={`menu-item ${activeRoute === "/about" && "active"}`}
+              onClick={() => handleMenuClick("/about")}
+            >
               Acerca de
             </li>
-            <li className="menu-item" onClick={() => navigate("/portafolio")}>
-              Portaolio
+            <li
+              className={`menu-item ${
+                activeRoute === "/portafolio" && "active"
+              }`}
+              onClick={() => handleMenuClick("/portafolio")}
+            >
+              Portafolio
             </li>
-            <li className="menu-item" onClick={() => navigate("/contact")}>
+            <li
+              className={`menu-item ${activeRoute === "/contact" && "active"}`}
+              onClick={() => handleMenuClick("/contact")}
+            >
               Contacto
             </li>
           </ul>
         </nav>
       </section>
-      {children}
     </>
   );
 };

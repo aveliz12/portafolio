@@ -1,11 +1,5 @@
-import Layout from "../components/Layout";
-
 const Portafolio = () => {
-  return (
-    <Layout>
-      <h1>portafolio</h1>
-    </Layout>
-  );
+  return <h1>portafolio</h1>;
 };
 
 export default Portafolio;
