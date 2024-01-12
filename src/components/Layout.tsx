@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles/layout_styles.css";
 import { useNavigate, useLocation } from "react-router-dom";
+import logo from "../assets/logo.png"
 const Navigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -19,7 +20,9 @@ const Navigation = () => {
     <>
       <section className="section">
         <nav className="nav-bar">
-          <h1 className="logo">AV</h1>
+          <h1 className="logo">
+            <img src={logo} alt="" />
+          </h1>
           <ul className="menu">
             <li
               className={`menu-item ${activeRoute === "/" && "active"}`}

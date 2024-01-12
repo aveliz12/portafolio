@@ -1,4 +1,5 @@
 .section {
+  flex-grow: 1;
   width: 100vw;
   height: 100%;
   --s: 84px;
@@ -38,16 +39,8 @@
   margin: 0 auto;
 }
 
-.logo {
-  font-family: cursive;
-  font-size: 2.5em;
-  color: #17202a;
-  transition: all 0.2s ease;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-
+.logo img{
+  width: 70px;
 }
 
 .menu {
@@ -60,21 +53,21 @@
 .menu-item {
 
   margin: 0 1rem;
-  color: #1b2631;
+  color: #5a7f78;
   cursor: pointer;
   font-size: 1.5em;
 
   &:hover {
-    color: #1b2631;
+    color: #5a7f78;
     text-shadow:
       0 0 2px #fff,
-      0 0 4px #fff,
+      0 0 4px #bbdec6,
       0 0 6px #fff,
-      0 0 10px rgb(222, 235, 231),
+      0 0 10px #5a7f78,
       0 0 45px rgb(153, 179, 170),
-      0 0 55px rgb(93, 109, 104),
+      0 0 55px #314c53,
       0 0 70px rgb(64, 71, 69),
-      0 0 80px rgb(0, 12, 8);
+      0 0 80px #010300
   }
 
   &::after {
@@ -82,7 +75,7 @@
     display: block;
     width: 0%;
     height: 3px;
-    background: #1b2631;
+    background: #5a7f78;
     transition: width 0.4s ease;
   }
 
@@ -92,24 +85,21 @@
 }
 
 .active {
-  color: #1b2631;
   text-shadow:
     0 0 2px #fff,
-    0 0 4px #fff,
+    0 0 4px #bbdec6,
     0 0 6px #fff,
-    0 0 10px rgb(222, 235, 231),
+    0 0 10px #5a7f78,
     0 0 45px rgb(153, 179, 170),
-    0 0 55px rgb(93, 109, 104),
+    0 0 55px #314c53,
     0 0 70px rgb(64, 71, 69),
-    0 0 80px rgb(0, 12, 8);
-
-  &::after {
-    width: 100%;
-    background: #1b2631;
-  }
-
-
+    0 0 80px #010300
 }
+.active::after {
+  width: 100%;
+}
+
+
 
 @media screen and (max-width: 768px) {
   .section {
@@ -130,9 +120,11 @@
   .section {
     height: 35vh
   }
-  .nav-bar{
+
+  .nav-bar {
     align-items: center;
   }
+
   .menu {
     display: flex;
     flex-direction: column;

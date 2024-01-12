@@ -5,7 +5,7 @@ import facebook from "../assets/facebook.png";
 import linkdn from "../assets/linkedin.png";
 import instagram from "../assets/instagram.png";
 import yo from "../assets/yo.jpg";
-
+import img1 from "../assets/soft.png";
 const Home = () => {
   return (
     <section className="container">
@@ -42,14 +42,26 @@ const Home = () => {
           </div>
         </div>
         <div className="side-rigth">
-          <h3>Hi, I'm</h3>
-          <h1>
-            <span>Olive</span> Hicks
-          </h1>
-          <p>
-            I'm a professional Web Developer. Our Main Goal to help & Satisficed
-            the Local & Global Clients by web development solutions
-          </p>
+          <div className="group">
+            <div className="card">
+              <span className="card-span">Alexander Véliz</span>
+              <p className="card-p">- Ingeniero en Software -</p>
+            </div>
+          </div>
+          <div className="card-2">
+            <img className="img-card2" src={img1} alt="" />
+
+            <div className="card2-info">
+              <p className="text-body">
+                Ingeniero en Software, siempre con un aprendizaje continuo.
+                Poseo conocimientos de tecnologías de programación y
+                metodologías. Apasionado por la innovación y la implementación de
+                soluciones creativas, he participado en proyectos que han
+                desarrollado mi capacidad para analizar y diseñar sistemas de
+                software.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

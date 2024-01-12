@@ -1,5 +1,6 @@
+
 .main {
-  padding: 8rem 18rem;
+  padding: 5.8rem 12rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(277px, 1fr));
   row-gap: 2rem;
@@ -19,7 +20,7 @@
   height: 100%;
   width: 100%;
   position: relative;
-  border: 3px solid #d5d8dc;
+  border: 3px solid #bbdec6;
   border-radius: 50%;
   display: flex;
   display: -webkit-flex;
@@ -42,8 +43,8 @@
   -webkit-align-items: center;
   justify-content: center;
   -webkit-justify-content: center;
-  background-color: #f8f9f9;
-  box-shadow: 0 0 10px #1b2631;
+  background-color: #f7f8fc;
+  box-shadow: 0 0 20px #314c53;
 }
 
 .icon-block img {
@@ -88,12 +89,102 @@
   transform: translate(-50%, -50%);
 }
 
-
-
 .images img {
   width: 300px;
   border-radius: 50%;
-  box-shadow: 0 0 10px #d1d0d0;
+  box-shadow: 0 0 10px #f7f8fc;
+}
+
+/*SIDE RIGTH*/
+.side-rigth {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: -100;
+}
+
+.group {
+  transition-duration: 500ms;
+}
+
+.group:hover {
+  transform: skewX(6deg) translateX(2px);
+}
+
+.card {
+  transition-duration: 500ms;
+  position: relative;
+  border-radius: 1rem;
+  width: 18rem;
+  height: 9rem;
+  background-color: #5a7f78;
+  color: #f7f8fc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.card::before {
+  content: '';
+  background-color: #bbdec6;
+  border-radius: 1rem;
+  width: 18rem;
+  height: 8rem;
+  transform: skewX(12deg);
+  position: absolute;
+  right: -0.85rem;
+  top: 0;
+  z-index: -10;
+}
+
+.card-span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.card-p {
+  color: #010300;
+  font-weight: 150;
+}
+
+.card-2 {
+  padding-top: 80px;
+  width: 500px;
+  height: 200px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card2-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-card2 {
+  --size: 100px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background: #5a7f78;
+  background: linear-gradient(to bottom, #bbdec6 0%, #f7f8fc 100%);
+  position: relative;
+}
+
+
+
+/*Text*/
+.text-body {
+  font-size: .8em;
+  text-align: justify;
+  color: #314c53;
+  font-weight: 500;
 }
 
 
@@ -184,7 +275,7 @@
     padding: 0 4.4rem;
   }
 
-  
+
 }
 
 @media screen and (max-width: 990px) {
@@ -229,7 +320,7 @@
     width: 300px;
   }
 
-  .images img{
+  .images img {
     width: 200px;
   }
 }

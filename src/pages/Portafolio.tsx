@@ -1,5 +1,8 @@
 const Portafolio = () => {
-  return <h1>portafolio</h1>;
+  return <div style={{ minHeight: "85vh" }}>
+  <h1>PORTAFOLIO</h1>
+  
+</div>;
 };
 
 export default Portafolio;

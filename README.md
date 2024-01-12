@@ -45,12 +45,19 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-
-Paleta de colores
-HEX
-#17202a
-#1b2631
-#212f3c
-#f8f9f9
-#ebedef
-#d5d8dc
+//PALETA DE COLORES
+.color1 {
+  #010300
+}
+.color2 {
+  #314c53
+}
+.color3 {
+  #5a7f78
+}
+.color4 {
+  #bbdec6
+}
+.color5 {
+  #f7f8fc
+}

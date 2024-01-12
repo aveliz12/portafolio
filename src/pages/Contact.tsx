@@ -1,6 +1,9 @@
 const Contact = () => {
   return (
-      <h1>CONTACTO</h1>
+    <div style={{ minHeight: "85vh" }}>
+    <h1>CONTACTO</h1>
+    
+  </div>
   );
 };
 
