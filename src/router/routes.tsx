@@ -1,8 +1,5 @@
-import {  Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Portafolio from "../pages/Portafolio";
-import Contact from "../pages/Contact";
+import { Routes, Route } from "react-router-dom";
+import { Home, About, Portafolio, Contact } from "../pages/pages";
 
 const MyRoutes = () => {
   return (

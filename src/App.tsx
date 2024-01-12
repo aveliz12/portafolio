@@ -1,6 +1,5 @@
 import MyRoutes from "./router/routes";
-import Layout from "./components/Layout";
-import Footer from "./components/Footer";
+import { Layout, Footer } from "./components/components";
 import { BrowserRouter } from "react-router-dom";
 
 function App() {
