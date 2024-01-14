@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import "../styles/home_styles.css";
-import github from "../assets/github.png";
-import facebook from "../assets/facebook.png";
-import linkdn from "../assets/linkedin.png";
-import instagram from "../assets/instagram.png";
-import yo from "../assets/yo.jpg";
-import img1 from "../assets/soft.png";
+import "../../styles/home_styles.css";
+import github from "../../assets/github.png";
+import facebook from "../../assets/facebook.png";
+import linkdn from "../../assets/linkedin.png";
+import instagram from "../../assets/instagram.png";
+// import yo from "../../assets/yo.jpg";
+import yo2 from "../../assets/FotoAV.jpg";
+import img1 from "../../assets/soft.png";
 const Home = () => {
   return (
     <section className="container">
@@ -38,7 +39,7 @@ const Home = () => {
             </Link>
           </div>
           <div className="images">
-            <img src={yo} alt="" />
+            <img src={yo2} alt="" />
           </div>
         </div>
         <div className="side-rigth">
