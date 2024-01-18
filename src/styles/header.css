@@ -7,7 +7,7 @@ p {
 
 .image-container {
   margin-top: 4em;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   width: 20%;
@@ -19,6 +19,7 @@ p {
 
 .title-container-header {
   height: 100%;
+  margin-top: 5em;
 }
 
 .p-header {
@@ -87,8 +88,8 @@ p {
 }
 
 .social {
-  position: fixed;
-  top: 20%;
+  position: absolute;
+  top: 30%;
   left: 5px;
 }
 

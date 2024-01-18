@@ -1,7 +1,8 @@
 .section {
-  flex-grow: 1;
+  position: fixed;
   width: 100vw;
-  height: 100%;
+  z-index: 1000;
+  padding-top: 4em;
   --s: 84px;
   --c1: #ffffff;
   --c2: #f8f8f8;
@@ -27,19 +28,23 @@
       var(--c2) 0 240deg,
       var(--c3) 0);
   background-size: calc(var(--s) * 1.732) var(--s);
+
 }
 
 .nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   padding-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 85%;
   height: 3rem;
   margin: 0 auto;
 }
 
-.logo img{
+.logo img {
   width: 70px;
 }
 
@@ -95,6 +100,7 @@
     0 0 70px rgb(64, 71, 69),
     0 0 80px #010300
 }
+
 .active::after {
   width: 100%;
 }

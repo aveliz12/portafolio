@@ -1,11 +1,11 @@
 import MyRoutes from "./router/routes";
-import { Layout, Footer } from "./components/components";
+import { NavBar, Footer } from "./components/components";
 import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <BrowserRouter>
-      <Layout />
+      <NavBar />
       <MyRoutes />
       <Footer />
     </BrowserRouter>
