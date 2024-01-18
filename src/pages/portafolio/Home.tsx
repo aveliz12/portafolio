@@ -6,7 +6,7 @@ import linkdn from "../../assets/linkedin.png";
 import instagram from "../../assets/instagram.png";
 // import yo from "../../assets/yo.jpg";
 import yo2 from "../../assets/FotoAV.jpg";
-import img1 from "../../assets/soft.png";
+import img1 from "../../assets/soft2.png";
 const Home = () => {
   return (
     <section className="container">
