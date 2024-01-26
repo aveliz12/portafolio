@@ -11,6 +11,8 @@ p {
   top: 0;
   right: 0;
   width: 20%;
+  animation: fadeIn 2s ease-in-out;
+
 }
 
 .image-container img {
@@ -20,6 +22,8 @@ p {
 .title-container-header {
   height: 100%;
   margin-top: 5em;
+  animation: fadeIn 2s ease-in-out;
+
 }
 
 .p-header {
@@ -79,11 +83,11 @@ p {
   position: relative;
   height: 20vh;
   text-align: center;
-  background-color: white;
+  background-color: #bbdec6;
 }
 
 .a-container {
-  color: #fff;
+  color: red;
   text-decoration: none;
 }
 
@@ -91,6 +95,7 @@ p {
   position: absolute;
   top: 30%;
   left: 5px;
+  animation: socialFadeIn 2s ease-in-out;
 }
 
 .social .ul-header {
@@ -180,6 +185,29 @@ p {
   animation-duration: 20s;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes socialFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes move-forever {
   0% {
     transform: translate3d(-90px, 0, 0);
@@ -204,8 +232,8 @@ p {
   }
 
   .image-container {
-    margin-top: 10em;
-    
+    margin-top: 5em;
+
   }
 
   .social {
@@ -215,8 +243,7 @@ p {
 
 @media screen and (max-width:600px) {
   .image-container {
-    margin-top: 18em;
-    
+    margin: 0 0;
   }
 
   .social {

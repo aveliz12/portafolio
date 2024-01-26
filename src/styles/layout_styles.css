@@ -1,8 +1,4 @@
 .section {
-  position: fixed;
-  width: 100vw;
-  z-index: 1000;
-  padding-top: 4em;
   --s: 84px;
   --c1: #ffffff;
   --c2: #f8f8f8;
@@ -32,8 +28,6 @@
 }
 
 .nav-bar {
-  position: fixed;
-  top: 0;
   width: 100%;
   z-index: 1000;
   padding-top: 10px;

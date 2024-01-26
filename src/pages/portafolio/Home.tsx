@@ -56,10 +56,8 @@ const Home = () => {
               <p className="text-body">
                 Ingeniero en Software, siempre con un aprendizaje continuo.
                 Poseo conocimientos de tecnologías de programación y
-                metodologías. Apasionado por la innovación y la implementación de
-                soluciones creativas, he participado en proyectos que han
-                desarrollado mi capacidad para analizar y diseñar sistemas de
-                software.
+                metodologías. Apasionado por la innovación y la implementación
+                de soluciones creativas.
               </p>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import "../../styles/header.css";
+import "../../styles/header_styles.css";
 import logo from "../../assets/logo.png";
 import soft2 from "../../assets/soft2.png";
 
@@ -8,13 +8,11 @@ const Header = () => {
     <>
       <div className="header">
         <div className="inner-header flex">
-          <div>
-            <div className="title-container-header">
-              <p className="p-header">INGENIERO EN SOFTWARE</p>
-              <h1>Alexander Véliz</h1>
-              <div className="img-header-container">
-                <img src={soft2} alt="" className="img-header" />
-              </div>
+          <div className="title-container-header">
+            <p className="p-header">INGENIERO EN SOFTWARE</p>
+            <h1>Alexander Véliz</h1>
+            <div className="img-header-container">
+              <img src={soft2} alt="" className="img-header" />
             </div>
           </div>
           <nav className="social">

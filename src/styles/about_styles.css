@@ -1,0 +1,68 @@
+.title {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  font-size: large;
+}
+
+.content-about-me {
+  display: flex;
+  justify-content: center;
+  padding: 4em 0;
+}
+
+.card-about-us {
+  width: 50em;
+  height: 20em;
+  background: #f7f8fc;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-about-us .description_about {
+  z-index: 1;
+}
+
+.card-about-us::before {
+  content: '';
+  position: absolute;
+  width: 100em;
+  background-image: linear-gradient(180deg, #bbdec6, #314c53);
+  height: 5em;
+  animation: rotBGimg 4s linear infinite;
+  transition: all 0.2s linear;
+}
+
+.card-about-us::after {
+  content: '';
+  position: absolute;
+  background: #fff;
+  inset: 5px;
+  border-radius: 15px;
+}
+
+
+.image-about {
+  width: 20em;
+  background-color: green;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
