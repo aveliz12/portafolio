@@ -42,20 +42,37 @@
 .card-about-us::after {
   content: '';
   position: absolute;
-  background: #fff;
+  background: #f7f8fc;
   inset: 5px;
   border-radius: 15px;
 }
 
 
-.image-about {
-  width: 20em;
-  background-color: green;
+.image-about img {
+  width: 15em;
+  height: 20em;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 
+.description_about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 50px;
+}
 
+.description_about p {
+  font-size: x-large;
+  font-weight: bold;
+  text-align: justify;
+  color: #010300;
+}
+
+.description_about h1 {
+  margin-bottom: 50px;
+}
 
 @keyframes rotBGimg {
   from {
@@ -64,5 +81,50 @@
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-about-us {
+    width: 20em;
+    height: 20em;
+  }
+
+  .description_about p {
+    font-size: large;
+  }
+
+  .description_about h1 {
+    font-size: x-large;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .content-about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-about-us {
+    width: 20em;
+    height: 20em;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .image-about img {
+    width: 15em;
+    height: 20em;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 }

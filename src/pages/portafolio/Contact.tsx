@@ -4,9 +4,8 @@ const Contact = () => {
   return (
     <div style={{ minHeight: "85vh" }}>
       <Header />
-    <h1>CONTACTO</h1>
-    
-  </div>
+      <h1>CONTACTO</h1>
+    </div>
   );
 };
 
