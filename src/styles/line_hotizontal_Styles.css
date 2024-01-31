@@ -1,0 +1,36 @@
+.line-horizontal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: smaller;
+  padding: 20px 0;
+  color: #314c53;
+}
+
+.line-horizontal {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #bbdec6;
+  transition: transform 0.3s ease;
+}
+
+.spot {
+  width: 10px;
+  height: 10px;
+  background-color: #5a7f78;
+  border-radius: 50%;
+  margin: 0 5px;
+
+}
+
+.text {
+  transition: transform 0.3s ease;
+}
+
+.line-horizontal-container:hover .text {
+  transform: scale(1.1);
+}
+
+.line-horizontal-container:hover .line-horizontal {
+  transform: scale(0.95);
+}

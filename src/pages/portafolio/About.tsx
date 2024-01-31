@@ -1,4 +1,8 @@
-import { BackToTopButton, Header } from "../../components/components";
+import {
+  BackToTopButton,
+  Header,
+  LineHorizontal,
+} from "../../components/components";
 import "../../styles/about_styles.css";
 import yo2 from "../../assets/yo2.jpg";
 const About = () => {
@@ -6,7 +10,7 @@ const About = () => {
     <div style={{ minHeight: "85vh" }}>
       <Header />
       <div className="title">
-        <h1>Acerda de mi</h1>
+        <h1>Acerca de mi</h1>
       </div>
       <div className="content-about-me">
         <div className="image-about">
@@ -24,7 +28,9 @@ const About = () => {
           </div>
         </div>
       </div>
-
+      <div className="info-about-me">
+        <LineHorizontal text="Servicios" />
+      </div>
       <BackToTopButton />
     </div>
   );

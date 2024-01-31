@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   padding: 20px 0;
-  font-size: large;
+  color: #314c53;
 }
 
 .content-about-me {
@@ -73,6 +73,7 @@
 .description_about h1 {
   margin-bottom: 50px;
 }
+
 
 @keyframes rotBGimg {
   from {

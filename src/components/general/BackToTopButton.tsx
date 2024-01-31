@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../styles/back_top_button_styles.css";
+import "../../styles/back_top_button_styles.css";
 import { BiSolidToTop } from "react-icons/bi";
 
 const BackToTopButton = () => {
