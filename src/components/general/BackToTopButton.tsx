@@ -7,10 +7,14 @@ const BackToTopButton = () => {
 
   //Funcion para hacer scroll hacia arriba
   const scrollTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", //Animacion de desplazamiento suave
-    });
+    const scrollToTop = () => {
+      const currentPosition = window.scrollY;
+      if (currentPosition > 0) {
+        window.scrollTo(0, currentPosition - currentPosition / 5); // Ajusta el divisor para controlar la velocidad de desplazamiento
+        setTimeout(scrollToTop, 16); // Ajusta el tiempo para controlar la frecuencia de actualización (16 ms para apuntar a 60 FPS)
+      }
+    };
+    scrollToTop();
   };
 
   //Manejar el evento de scroll para mostrar o no boton

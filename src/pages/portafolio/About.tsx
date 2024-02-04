@@ -2,6 +2,7 @@ import {
   BackToTopButton,
   Header,
   LineHorizontal,
+  ProgressBar,
 } from "../../components/components";
 import "../../styles/about_styles.css";
 import yo2 from "../../assets/yo2.jpg";
@@ -29,7 +30,13 @@ const About = () => {
         </div>
       </div>
       <div className="info-about-me">
-        <LineHorizontal text="Servicios" />
+        <LineHorizontal text="Mis Servicios" />
+        <div className="services"></div>
+        <LineHorizontal text="Mis Habilidades" />
+        <div className="skills">
+          <ProgressBar percentage={80}></ProgressBar>
+        </div>
+        <LineHorizontal text="Proyectos completados" />
       </div>
       <BackToTopButton />
     </div>
