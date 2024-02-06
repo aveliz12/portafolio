@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import "../../styles/line_hotizontal_Styles.css";
+import "../../styles/line_hotizontal_styles.css";
 
 interface LineHorizontalProps {
   text: ReactNode;

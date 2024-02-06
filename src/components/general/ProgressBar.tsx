@@ -23,8 +23,8 @@ const ProgressBar = ({ percentage }: Props) => {
             styles={buildStyles({
               textSize: "20px",
               textColor: "#314c53",
-              pathColor: `#bbdec6`,
-              trailColor: "#5a7f78",
+              pathColor: `#5a7f78`,
+              trailColor: "#bbdec6",
             })}
           />
         )}
