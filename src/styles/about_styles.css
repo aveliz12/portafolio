@@ -87,7 +87,7 @@
   align-items: center;
 }
 
-.container-services {
+.container-services-goals {
   display: flex;
   justify-content: space-around;
   margin: 20px;
@@ -105,6 +105,15 @@
   text-align: center;
 }
 
+.goals {
+  width: 15em;
+  height: 15em;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bold;
+
+}
+
 @keyframes rotBGimg {
   from {
     transform: rotate(0deg);
@@ -113,6 +122,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@media screen and (max-width: 900px) {
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -133,6 +150,11 @@
 
   .description_about h1 {
     font-size: x-large;
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
 }
@@ -157,5 +179,10 @@
     height: 20em;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }

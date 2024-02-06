@@ -6,6 +6,7 @@ import {
 } from "../../components/components";
 import "../../styles/about_styles.css";
 import yo2 from "../../assets/yo2.jpg";
+import goal from "../../assets/goal.png";
 import { habilities, services } from "../../data/about/about_us";
 const About = () => {
   return (
@@ -31,17 +32,17 @@ const About = () => {
         </div>
       </div>
       <div className="info-about-me">
-        <LineHorizontal text="Mis Servicios" />
-        <div className="container-services">
+        <LineHorizontal text="SERVICIOS" />
+        <div className="container-services-goals">
           {services.map((item) => (
-            <div className="services">
+            <div className="services" key={item.id}>
               <img src={item.image} alt="image" style={{ width: "35%" }} />
               <h4>{item.name}</h4>
               <p>{item.description}</p>
             </div>
           ))}
         </div>
-        <LineHorizontal text="Mis Habilidades" />
+        <LineHorizontal text="HABILIDADES" />
         <div className="skills">
           {habilities.map((data) => (
             <div className="content-skills" key={data.id}>
@@ -50,7 +51,17 @@ const About = () => {
             </div>
           ))}
         </div>
-        <LineHorizontal text="Proyectos completados" />
+        <LineHorizontal text="PROYECTOS" />
+        <div className="container-services-goals">
+          <div className="goals">
+            <img
+              src={goal}
+              alt="goal"
+              style={{ width: "35%", marginBottom: "20px" }}
+            />
+            <p>2 Proyectos Completados</p>
+          </div>
+        </div>
       </div>
       <BackToTopButton />
     </div>

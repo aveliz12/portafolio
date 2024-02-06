@@ -38,7 +38,7 @@ export const services = [
     id: 1,
     name: "Desarrollo Web",
     description:
-      "Desarrollo de paginas web modernos y dinámicos que cumplan con las necesidades del usuarios",
+      "Desarrollo de paginas web modernas y dinámicas que cumplan con las necesidades del usuario",
     image: service1,
   },
 ];
