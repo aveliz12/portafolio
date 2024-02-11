@@ -3,12 +3,30 @@ import {
   Header,
   LineHorizontal,
   ProgressBar,
+  Button,
 } from "../../components/components";
 import "../../styles/about_styles.css";
 import yo2 from "../../assets/yo2.jpg";
 import goal from "../../assets/goal.png";
 import { habilities, services } from "../../data/about/about_us";
+import pdfFile from "../../data/about/Hoja de vida_Alexander Véliz.pdf";
 const About = () => {
+  const downloadCV = async () => {
+    const response = await fetch(pdfFile);
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "Hoja de vida_AV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Liberar recursos de memoria
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div style={{ minHeight: "85vh" }}>
       <Header />
@@ -28,6 +46,7 @@ const About = () => {
               desarrollo de aplicaciones web con enfoque en la experiencia de
               usuario.
             </p>
+            <Button text="Descargar CV" funcion={() => downloadCV()} />
           </div>
         </div>
       </div>
