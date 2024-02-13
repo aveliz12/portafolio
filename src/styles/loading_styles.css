@@ -1,0 +1,41 @@
+.loading-overlay {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #314c53;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+
+@keyframes openDoors {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes closeDoors {
+  0% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+.loading-enter {
+  animation: openDoors 0.5s forwards;
+}
+
+.loading-exit {
+  animation: closeDoors 0.5s forwards;
+}

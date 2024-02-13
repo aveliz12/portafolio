@@ -1,12 +1,11 @@
 
 .main {
   background-color: #f7f8fc;
-  padding: 5.8rem 12rem;
+  padding: 10rem 12rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(277px, 1fr));
   row-gap: 2rem;
   column-gap: 6rem;
-  align-items: center;
   animation: topSideAni 1s ease forwards;
 }
 

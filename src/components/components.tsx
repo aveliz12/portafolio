@@ -5,3 +5,4 @@ export { default as BackToTopButton } from "./general/BackToTopButton";
 export { default as LineHorizontal } from "./general/LineHorizontal";
 export { default as ProgressBar } from "./general/ProgressBar";
 export { default as Button } from "./general/Button";
+export { default as Loading } from "./general/Loading";

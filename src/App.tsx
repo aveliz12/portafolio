@@ -1,13 +1,15 @@
 import MyRoutes from "./router/routes";
-import { NavBar, Footer } from "./components/components";
+import { NavBar, Footer, Loading } from "./components/components";
 import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
-      <MyRoutes />
-      <Footer />
+      <Loading>
+        <NavBar />
+        <MyRoutes />
+        <Footer />
+      </Loading>
     </BrowserRouter>
   );
 }
