@@ -1,0 +1,62 @@
+.title-contact {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  color: #314c53;
+}
+
+.container-contact {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5em;
+}
+
+.container-contact .glass {
+  position: relative;
+  width: 220px;
+  height: 240px;
+  background: linear-gradient(#f7f8fc, transparent);
+  border: 1px solid #f7f8fc;
+  box-shadow: 0 15px 25px #5a7f78;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.7s;
+  border-radius: 10px;
+  margin: 0 -45px;
+  backdrop-filter: blur(10px);
+  transform: rotate(calc(var(--r) * 1deg));
+}
+
+.container-contact:hover .glass {
+  transform: rotate(0deg);
+  margin: 0 20px;
+}
+
+.container-contact .glass::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: #dceee2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #314c53;
+  font-weight: bold;
+}
+
+.glass-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+}
+
+.text-contact {
+  margin: 20px 0;
+}
