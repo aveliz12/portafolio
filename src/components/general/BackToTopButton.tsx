@@ -20,7 +20,7 @@ const BackToTopButton = () => {
   //Manejar el evento de scroll para mostrar o no boton
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 400) {
+      if (window.scrollY > 200) {
         setIsVisible(true);
       } else {
         setIsVisible(false);

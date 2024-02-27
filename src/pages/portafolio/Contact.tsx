@@ -1,4 +1,4 @@
-import { Header } from "../../components/components";
+import { BackToTopButton, Header } from "../../components/components";
 import { contact } from "../../data/contact/contact";
 import phone from "../../assets/phone.png";
 import location from "../../assets/location.png";
@@ -33,6 +33,7 @@ const Contact = () => {
           </div>
         </div>
       ))}
+      <BackToTopButton />
     </div>
   );
 };

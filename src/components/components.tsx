@@ -6,3 +6,4 @@ export { default as LineHorizontal } from "./general/LineHorizontal";
 export { default as ProgressBar } from "./general/ProgressBar";
 export { default as Button } from "./general/Button";
 export { default as Loading } from "./general/Loading";
+export { default as InformationPortfolio } from "./info_portfolio/InformationPortfolio";

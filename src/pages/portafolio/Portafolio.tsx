@@ -1,23 +1,19 @@
 import { useState } from "react";
-import { Header } from "../../components/components";
+import {
+  BackToTopButton,
+  Header,
+  InformationPortfolio,
+} from "../../components/components";
 import "../../styles/portfolio_styles.css";
-
 import { projectsPortfolio } from "../../data/portafolio/portfolio";
-
-const cards = [
-  { title: "Proyecto 1", category: "mobile" },
-  { title: "Proyecto 2", category: "web" },
-  { title: "Proyecto 3", category: "mobile" },
-  { title: "Proyecto 4", category: "web" },
-  { title: "Proyecto 5", category: "web" },
-  { title: "Proyecto 6", category: "web" },
-];
 
 const Portafolio = () => {
   const [filter, setFilter] = useState("all");
+  const [selectedProject, setSelectedProject] = useState({});
 
   const handleFilterChange = (newFilter: any) => {
     setFilter(newFilter);
+    setSelectedProject({});
   };
 
   //Filtrarlas tarjetas segun la categoria
@@ -26,6 +22,12 @@ const Portafolio = () => {
       ? projectsPortfolio
       : projectsPortfolio.filter((card) => card.category === filter);
 
+  const handleModal = (index: number) => {
+    const project = projectsPortfolio.find((data) => data.id === index);
+    if (project) {
+      setSelectedProject(project);
+    }
+  };
   return (
     <div style={{ minHeight: "100vh" }}>
       <Header />
@@ -35,7 +37,11 @@ const Portafolio = () => {
       <div className="container-portfolio">
         <div className="filter-menu">
           <button
-            className="button-portfolio-menu"
+            className={
+              filter === "all"
+                ? "button-portfolio-menu active-portfolio"
+                : "button-portfolio-menu"
+            }
             onClick={(e) => {
               e.preventDefault();
               handleFilterChange("all");
@@ -44,7 +50,11 @@ const Portafolio = () => {
             Todos
           </button>
           <button
-            className="button-portfolio-menu"
+            className={
+              filter === "mobile"
+                ? " button-portfolio-menu active-portfolio"
+                : "button-portfolio-menu"
+            }
             onClick={(e) => {
               e.preventDefault();
               handleFilterChange("mobile");
@@ -53,7 +63,11 @@ const Portafolio = () => {
             Móvil
           </button>
           <button
-            className="button-portfolio-menu"
+            className={
+              filter === "web"
+                ? "button-portfolio-menu active-portfolio"
+                : "button-portfolio-menu"
+            }
             onClick={(e) => {
               e.preventDefault();
               handleFilterChange("web");
@@ -63,13 +77,23 @@ const Portafolio = () => {
           </button>
         </div>
         <div className="cards-container-portfolio">
-          {filteredCards.map((card, index) => (
-            <div key={index} className="card-project-portfolio">
-              <h3>{card.name}</h3>
+          {filteredCards.map((card) => (
+            <div key={card.id} className="card-project-portfolio">
+              <img className="image-card-project" src={card.image} alt="" />
+
+              <h3 className="text-card-project">{card.name}</h3>
+              <button
+                onClick={() => handleModal(card.id)}
+                className="button-card-project"
+              >
+                Ver más..
+              </button>
             </div>
           ))}
         </div>
       </div>
+      <InformationPortfolio></InformationPortfolio>
+      <BackToTopButton />
     </div>
   );
 };
