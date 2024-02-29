@@ -77,6 +77,17 @@
   width: 100%;
 }
 
+.image-modal {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.image-content-modal {
+  width: 90%;
+}
+
 .text-card-project {
   text-align: center;
   margin: 15px 0;
@@ -100,6 +111,22 @@
 
 .button-card-project:hover {
   text-decoration: underline;
+}
+
+.text-modal {
+  text-align: justify;
+  margin: 35px 0;
+  font-size: 25px;
+  color: #314c53;
+}
+
+.info-modal {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 10em;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {

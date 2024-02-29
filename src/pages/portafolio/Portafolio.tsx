@@ -116,13 +116,38 @@ const Portafolio = () => {
           ))}
         </div>
       </div>
-      <Modal
-        isOpen={modalOpen}
-        onClose={closeModal}
-        title={selectedProject ? selectedProject.name : ""}
-      >
-        <p>Hola</p>
-      </Modal>
+      {selectedProject ? (
+        <Modal
+          isOpen={modalOpen}
+          onClose={closeModal}
+          title={selectedProject.name}
+        >
+          <div className="image-modal">
+            <img
+              className="image-content-modal"
+              src={selectedProject.image}
+              alt=""
+            />
+          </div>
+          <p className="text-modal">
+            {selectedProject.caption == ""
+              ? "NO HAY CONTENIDO..."
+              : selectedProject.caption}
+          </p>
+          <div className="info-modal">
+            <div className="client-modal">
+              <h6 style={{ color: "#314c53" }}>CLIENTE</h6>
+              <p style={{ color: "#5a7f78" }}>{selectedProject.client}</p>
+            </div>
+            <div className="service-modal">
+              <h6 style={{ color: "#314c53" }}>SERVICIOS</h6>
+              <p style={{ color: "#5a7f78" }}>{selectedProject.services}</p>
+            </div>
+          </div>
+        </Modal>
+      ) : (
+        ""
+      )}
 
       <BackToTopButton />
     </div>

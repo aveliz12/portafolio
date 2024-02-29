@@ -17,17 +17,9 @@ export const projectsPortfolio = [
     name: "Cota City FC",
     category: "mobile",
     image: cotacity,
-    caption: "",
+    caption:
+      "Esta aplicación móvil ofrece una experiencia completa y moderna para todos los miembros de la comunidad futbolística, especialmente para los de la escuela de fútbol. Con la aplicación móvil Cota City FC, los profesores pueden automatizar los procesos al completar inscripciones para las categorías y edades correspondientes a la escuela, llenar información sobre la escuela, que sea para todo público como por ejemplo: el horario, categorías, edades, logros de la escuela en campeonatos, eventos, entre otros. La aplicación muestra a los demás usuarios ese tipo de información, además muestran las redes sociales por las cuales podrían contactarse directamente con algún profesor de la escuela de fútbol. Gracias a la automatización de estos procesos, se ha logrado mejorar significativamente la eficiencia operativa de la escuela de fútbol, reduciendo el tiempo y los esfuerzos dedicados a tareas manuales repetitivas.",
     client: "Escuela de fútbol Cota City FC",
     services: "Aplicación móvil, Backend",
-  },
-  {
-    id: 3,
-    name: "Ejemplo",
-    category: "web",
-    image: ejemplo2,
-    caption: "",
-    client: "Prueba ejemplo",
-    services: "Ejmplo",
   },
 ];

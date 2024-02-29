@@ -29,6 +29,7 @@
 
 .modal-title {
   margin: 0;
+  color: #314c53;
 }
 
 .close-button {
@@ -37,10 +38,11 @@
   cursor: pointer;
   font-size: larger;
   font-weight: bold;
+  color: #5a7f78;
 }
 
 .modal-content {
   padding: 10px;
   overflow-y: auto;
-  max-height: calc(70% - 40px);
+  max-height: calc(95% - 40px);
 }
