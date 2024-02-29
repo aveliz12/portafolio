@@ -1,19 +1,35 @@
-import { useState } from "react";
-import {
-  BackToTopButton,
-  Header,
-  InformationPortfolio,
-} from "../../components/components";
+import { useEffect, useState } from "react";
+import { BackToTopButton, Header, Modal } from "../../components/components";
 import "../../styles/portfolio_styles.css";
 import { projectsPortfolio } from "../../data/portafolio/portfolio";
-
+interface Project {
+  id: number;
+  name: string;
+  category: string;
+  image: string;
+  caption: string;
+  client: string;
+  services: string;
+}
 const Portafolio = () => {
   const [filter, setFilter] = useState("all");
-  const [selectedProject, setSelectedProject] = useState({});
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [modalOpen, setModalOpen] = useState(false);
 
+  //MODAL
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedProject(null);
+  };
+
+  //Cabiar en el menu de tipo de proyecto
   const handleFilterChange = (newFilter: any) => {
     setFilter(newFilter);
-    setSelectedProject({});
+    setSelectedProject(null);
   };
 
   //Filtrarlas tarjetas segun la categoria
@@ -26,8 +42,14 @@ const Portafolio = () => {
     const project = projectsPortfolio.find((data) => data.id === index);
     if (project) {
       setSelectedProject(project);
+      openModal();
     }
   };
+
+  useEffect(() => {
+    console.log(null);
+  }, [selectedProject]);
+
   return (
     <div style={{ minHeight: "100vh" }}>
       <Header />
@@ -83,7 +105,9 @@ const Portafolio = () => {
 
               <h3 className="text-card-project">{card.name}</h3>
               <button
-                onClick={() => handleModal(card.id)}
+                onClick={() => {
+                  handleModal(card.id);
+                }}
                 className="button-card-project"
               >
                 Ver más..
@@ -92,7 +116,14 @@ const Portafolio = () => {
           ))}
         </div>
       </div>
-      <InformationPortfolio></InformationPortfolio>
+      <Modal
+        isOpen={modalOpen}
+        onClose={closeModal}
+        title={selectedProject ? selectedProject.name : ""}
+      >
+        <p>Hola</p>
+      </Modal>
+
       <BackToTopButton />
     </div>
   );

@@ -1,5 +1,5 @@
 import ibarra from "../../assets/portfolio/ibarra.jpg";
-import ejemplo1 from "../../assets/service_1.png";
+import cotacity from "../../assets/portfolio/cotacity.png";
 import ejemplo2 from "../../assets/service_1.png";
 export const projectsPortfolio = [
   {
@@ -16,7 +16,7 @@ export const projectsPortfolio = [
     id: 2,
     name: "Cota City FC",
     category: "mobile",
-    image: ejemplo2,
+    image: cotacity,
     caption: "",
     client: "Escuela de fútbol Cota City FC",
     services: "Aplicación móvil, Backend",
@@ -25,7 +25,7 @@ export const projectsPortfolio = [
     id: 3,
     name: "Ejemplo",
     category: "web",
-    image: ejemplo1,
+    image: ejemplo2,
     caption: "",
     client: "Prueba ejemplo",
     services: "Ejmplo",
