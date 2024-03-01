@@ -86,6 +86,8 @@
 
 .image-content-modal {
   width: 90%;
+  filter: none;
+  color: inherit;
 }
 
 .text-card-project {

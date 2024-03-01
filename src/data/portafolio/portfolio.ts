@@ -1,6 +1,5 @@
-import ibarra from "../../assets/portfolio/ibarra.jpg";
 import cotacity from "../../assets/portfolio/cotacity.png";
-import ejemplo2 from "../../assets/service_1.png";
+import ibarra from "../../assets/portfolio/ibarra.jpg";
 export const projectsPortfolio = [
   {
     id: 1,
